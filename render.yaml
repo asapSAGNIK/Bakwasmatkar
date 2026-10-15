@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: argument-translator-api
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: ENV
+        value: production
+      - key: CORS_ORIGINS
+        value: https://YOUR-VERCEL-APP.vercel.app
+      - key: GROQ_API_KEY
+        sync: false
+      - key: STT_PROVIDER
+        value: auto
+      - key: TRANSLATE_PROVIDER
+        value: auto
+      - key: TTS_PROVIDER
+        value: auto

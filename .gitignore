@@ -1,0 +1,24 @@
+node_modules/
+.next/
+out/
+dist/
+*.log
+.DS_Store
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+backend/.env
+
+# next
+frontend/.env.local
+frontend/.next/
+
+# misc
+coverage/
+*.mp3
+*.wav
